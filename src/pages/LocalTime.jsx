@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function DigitalClock() {
+function LocalTime() {
   const [time, setTime] = useState(new Date())
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function DigitalClock() {
   const dateString = time.toLocaleDateString("en-US", options)
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-green-500 ">
+    <div className="flex p-[247px] items-center justify-center bg-yellow-300 ">
       <div className=' bg-blue-500 shadow-lg   p-40 rounded-md text-white  '>
         <h1 className="font-light text-5xl ml-14">{time.toLocaleTimeString()}</h1>
         <p className="mt-5 text-2xl">{dateString}</p>
@@ -32,6 +32,6 @@ function DigitalClock() {
   )
 }
 
-export default DigitalClock
+export default LocalTime
 
 
